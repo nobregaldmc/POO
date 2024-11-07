@@ -1,0 +1,8 @@
+{
+    "patches": [
+        {
+            "label": "2024-11-07_09-43-36",
+            "content": "#include \"fn.hpp\"\n#include \"student.hpp\"\n\nint main () {\n    Student stu(\"\", \"\");    //COISA A SER MANIPULADA\n    \n    if (Debug::debug) {\n        Debug::run();\n        return 0;\n    }\n\n    while (true) {\n        fn::write(\"$\", \"\");     //MOSTRA '$' NA FRENTE\n        auto line = fn::input();    //L\u00ca A LINHA\n        auto args = fn::split(line, ' ');   //QUBRA EM ARRAY DE PALAVRAS\n\n        fn::write(line); //test echo\n\n        if      (args[0] == \"end\"  ) { break;                               }\n\n        else if (args[0] == \"init\" ) { stu = Student(args[1], args[2]);     }       //AQUI VOCE REPASSA OS PARAMETROS PARA O OBJETO\n        else if (args[0] == \"grow\" ) { stu.grow(+args[1]);                  }       //CONVERTENDO OS QUE PRECISAM SER NUMEROS OU INTEIROS\n        else if (args[0] == \"noise\") { stu.noise();              }\n        else if (args[0] == \"show\" ) { stu.show();               }\n\n        else                         { fn::write(\"fail: comando invalido\"); }\n    }\n}\n"
+        }
+    ]
+}
