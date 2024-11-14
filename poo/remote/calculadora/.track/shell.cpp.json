@@ -1,0 +1,12 @@
+{
+    "patches": [
+        {
+            "label": "2024-11-13_11-12-19",
+            "content": "@@ -478,22 +478,19 @@\n ) %7B stu.\n-studen\n+ini\n t(+args%5B\n"
+        },
+        {
+            "label": "2024-11-13_23-14-19",
+            "content": "#include \"fn.hpp\" // https://raw.githubusercontent.com/senapk/cppaux/master/fn.hpp\n#include \"student.hpp\"\n\nint main() {\n    Student stu;\n\n    while (true) {\n        fn::write(\"$\", \"\");\n        auto line = fn::input();\n        auto args = fn::split(line, ' ');\n        fn::write(line);\n\n        if      (args[0] == \"end\"   ) { break;                               }\n\n        else if (args[0] == \"show\"  ) { stu.show();                      }\n        else if (args[0] == \"init\"  ) { stu.student(+args[1]);              }\n        else if (args[0] == \"charge\") { stu.charge(+args[1]);            }\n        else if (args[0] == \"sum\"   ) { stu.sum(+args[1], +args[2]);     }\n        else if (args[0] == \"div\"   ) { stu.div(+args[1], +args[2]);     }\n\n        else                          { fn::write(\"fail: comando invalido\"); }\n    }\n}\n"
+        }
+    ]
+}

@@ -13,7 +13,7 @@ int main() {
         if      (args[0] == "end"   ) { break;                               }
 
         else if (args[0] == "show"  ) { stu.show();                      }
-        else if (args[0] == "init"  ) { stu.init(+args[1]);              }
+        else if (args[0] == "init"  ) { stu.student(+args[1]);              }
         else if (args[0] == "charge") { stu.charge(+args[1]);            }
         else if (args[0] == "sum"   ) { stu.sum(+args[1], +args[2]);     }
         else if (args[0] == "div"   ) { stu.div(+args[1], +args[2]);     }
